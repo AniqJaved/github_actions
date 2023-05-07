@@ -1,5 +1,5 @@
 name: Matrix
-on: push
+on: pull_request     #Actually it is push but just to stop it working each time I make a push I changed it to pull request.
 
 jobs:
   node-version:
@@ -24,7 +24,7 @@ jobs:
         run: node -v
       - uses: actions/setup-node@v1
         with:
-          node-version: 6
+          node-version: ${{ matrix.node-version }}
       - name: Log node version
         run: |
           node -v
