@@ -1,6 +1,4 @@
 name: Actions Workflow
-
-
 on: 
     push:
         branches:
@@ -11,14 +9,14 @@ on:
 jobs:
     run-github-actions:
         runs-on: ubuntu-latest
-        steps:
-            - name: List Files
-              run: |
-                  pwd
-                  ls -a
-            - name: Checkout
-              uses: actions/checkout@v1
-            - name: List Files After Checkout
-              run: |
-                  pwd
-                  ls -a
+    #     steps:
+    #         - name: List Files
+    #           run: |
+    #               pwd
+    #               ls -a
+    #         - name: Checkout
+    #           uses: actions/checkout@v1
+    #         - name: List Files After Checkout
+    #           run: |
+    #               pwd
+    #               ls -a
